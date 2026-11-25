@@ -1,55 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Practice</title>
+    <title>Flexbox Navbar Practice</title>
 
     <style>
-             
-*{
-    background-color: rgb(184, 184, 212);
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-h1{
-    color: rgb(8, 8, 132);
-    font-size: 40px;
-}
-p{
-    font-size: 20px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
 
-button{
-    background-color: green;
-    padding: 10px;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 20px 40px;
+        }
 
-.box{
-    width: 300px;
-    height: 150px;
-    background-color: orange;
-    padding: 20px;
-    border: 5px solid black;
-    margin:30px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px gray;
-box-sizing: border-box;
-}
+        .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
 
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: orange;
+        }
+
+        .content {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content h1 {
+            font-size: 40px;
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: gray;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-      <h1>Hello CSS!</h1>
-    <p>I am learning CSS.</p>
-    <button>Click Me</button>
-    
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
 
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="box">
+    <section class="content">
+        <h1>Welcome to My Website!</h1>
+        <p>I am learning CSS Flexbox and Responsive Design.</p>
+    </section>
 
-  CSS Box MODEL
-    </div>
 </body>
 </html>
+```
