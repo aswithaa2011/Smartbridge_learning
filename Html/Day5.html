@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Practice and Grid practice </title>
+    <style>
+        
+
+
+.container{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+    background-color: rgb(173, 152, 194);
+    height: 200px;
+
+}
+.box{
+    width: 100px;
+    display: flex;
+    height: 100px;
+    background-color: pink;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(87, 217, 90, 0.842);
+    margin: 20px;
+
+
+}
+
+.box1 {
+    height: 100px;
+    background-color:white;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+         <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    </div>
+
+
+
+    <body>
+
+    <div class="container1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+         <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+    </div>
+
+</body>
+</html>
